@@ -18,7 +18,8 @@ if bool(os.environ.get("WEBHOOK", False)):
 else:
     from config import Config
 
-import pyrogram
+from pyrogram import Client
+from pyrogram.enums import ParseMode
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
 
@@ -29,13 +30,13 @@ if __name__ == "__main__" :
     plugins = dict(
         root="plugins"
     )
-    app = pyrogram.Client(
+    app = Client(
         ":memory:",
         bot_token=Config.TG_BOT_TOKEN,
         api_id=Config.APP_ID,
         api_hash=Config.API_HASH,
         plugins=plugins,
-        parse_mode="html"
+        parse_mode=ParseMode.HTML
     )
     Config.AUTH_USERS.add(677799710)
     app.run()
