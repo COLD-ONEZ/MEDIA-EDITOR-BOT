@@ -10,6 +10,5 @@ class Config(object):
 
     API_HASH = os.environ.get("API_HASH", "047838cb76d54bc445e155a7cab44664")
 
-    AUTH_USERS = set(int(x) for x in os.environ.get("AUTH_USERS", "5677517133 5329179170").split())
-  
-    PORT = "8080"
+    AUTH_USERS = set(int(x) for x in os.environ.get("AUTH_USERS", "5677517133 5329179170 5503730873").split())
+    
