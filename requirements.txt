@@ -1,4 +1,4 @@
-pyrotgfork==2.0.106
+pyrofork==2.3.45
 tgcrypto==1.2.5
 pymongo
 pyromod==1.5
